@@ -12,10 +12,7 @@ app = FastAPI()
 # Allow frontend (React) to talk to backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://your-frontend-domain.com"  # (optional for later)
-    ],  # for dev it's fine, in prod restrict this
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
