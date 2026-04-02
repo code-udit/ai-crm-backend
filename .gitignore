@@ -1,0 +1,46 @@
+# ------------------ PYTHON ------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+
+# ------------------ VIRTUAL ENV ------------------
+venv/
+.env/
+.env.*
+.env.local
+
+# ------------------ DATABASE ------------------
+*.db
+*.sqlite3
+
+# ------------------ LOG FILES ------------------
+*.log
+
+# ------------------ IDE / EDITOR ------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------ OS FILES ------------------
+.DS_Store
+Thumbs.db
+
+# ------------------ TEST / CACHE ------------------
+.pytest_cache/
+.cache/
+
+# ------------------ ENV VARIABLES ------------------
+.env
+
+# ------------------ BUILD / DIST ------------------
+build/
+dist/
+*.egg-info/
+
+# ------------------ TEMP FILES ------------------
+*.tmp
+*.bak
