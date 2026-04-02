@@ -137,8 +137,3 @@ def run_agent(message: dict):
     # return updated data back to frontend
     return result["data"]  
 
-@app.delete("/interactions")
-def delete_all(db: Session = Depends(get_db)):
-    db.query(models.Interaction).delete()
-    db.commit()
-    return {"message": "deleted"}
