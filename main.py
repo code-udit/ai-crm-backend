@@ -12,11 +12,19 @@ app = FastAPI()
 # Allow frontend (React) to talk to backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for dev it's fine, in prod restrict this
+    allow_origins=[
+        "http://localhost:3000",
+        "https://your-frontend-domain.com"  # (optional for later)
+    ],  # for dev it's fine, in prod restrict this
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+allow_credentials=True,
+allow_methods=["*"],
+allow_headers=["*"],
 
 # Create DB tables automatically
 Base.metadata.create_all(bind=engine)
