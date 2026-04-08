@@ -9,6 +9,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+@app.get("/health") 
+def health():
+    return {"status": "ok"}
+
 # Allow frontend (React) to talk to backend
 app.add_middleware(
     CORSMiddleware,
